@@ -1,0 +1,47 @@
+.tabs {
+    width: 650px;
+    height: 32px;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 10px;
+    padding-inline: 5px;
+    z-index: 0;
+    margin-bottom: 20px;
+}
+
+.tab {
+    font-family: 'Roboto Mono', monospace !important;
+    font-size: 24px;
+    width: 120px;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.75;
+
+    transition:
+        border-bottom 0.1s ease,
+        opacity 0.2s;
+
+    &:active {
+        transform: scale(0.975);
+    }
+}
+
+.selected {
+    border-bottom: 2px solid #000;
+    opacity: 1;
+    font-weight: 500;
+}
+
+@media screen and (width < 700px) {
+    .tabs {
+        width: 100%;
+        overflow-x: auto;
+        justify-content: flex-start;
+
+        &::-webkit-scrollbar {
+            appearance: none;
+            display: none;
+        }
+    }
+}

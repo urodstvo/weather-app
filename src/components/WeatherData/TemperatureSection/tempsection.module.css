@@ -1,0 +1,61 @@
+.container {
+    width: 650px;
+    margin-bottom: 40px;
+}
+
+.leftSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.rightSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 96px;
+    height: 96px;
+    overflow: hidden;
+
+    & > img {
+        object-fit: cover;
+        width: 125%;
+        height: 125%;
+    }
+}
+
+.temperature {
+    position: relative;
+    display: flex;
+    font-size: 90px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.description {
+    font-size: 24px;
+    opacity: 0.75;
+}
+
+.alternativeUnit {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    font-size: 32px;
+    opacity: 55%;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.value {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (width < 700px) {
+    .container {
+        width: 100%;
+        padding: 0 5px;
+    }
+}

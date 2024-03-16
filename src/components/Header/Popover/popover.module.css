@@ -1,0 +1,11 @@
+.popoverMenu {
+    position: absolute;
+    left: 0;
+    top: calc(var(--header-height) + 1rem);
+    width: 100%;
+}
+
+.popoverContainer {
+    position: relative;
+    flex: 1;
+}
